@@ -3,15 +3,20 @@
 
 <head>
     <script src="https://code.jquery.com/jquery-git.js"></script>
-    <script> //Your Code Here </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">     
 </head>
 
 <body>
-    <p>Please Input your Name:</p>
-    <input type="text" name="name">
+    <p>Please Input your Name:<span></span></p>
+    <input id="input-field" type="text" name="name">
     <input id="buttonName" type="button" value="Click to set name" />
+    <script> 
+        let inputContent ="";
+        $("#input-field").change(function(e){
+            inputContent = e.target.value;
+            $("span").text(inputContent)
+        }); </script>
 </body>
 
 </html>
